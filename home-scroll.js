@@ -153,17 +153,17 @@
       });
     }
 
-    // Experience items stagger
+    // Experience items: a quick, crisp rise as each entry reaches the viewport.
     const expItems = document.querySelectorAll('.exp-item');
     expItems.forEach((item, i) => {
       gsap.from(item, {
-        scrollTrigger: { trigger: item, start: 'top 92%', once: true },
+        scrollTrigger: { trigger: item, start: 'top 90%', once: true },
         opacity: 0,
-        filter: 'blur(12px)',
-        x: -32,
-        duration: 0.6,
-        ease: 'power2.out',
-        delay: i * 0.05, // 50ms stagger
+        y: 24,
+        filter: 'blur(5px)',
+        duration: 0.38,
+        ease: 'power3.out',
+        delay: i * 0.02,
       });
     });
 
